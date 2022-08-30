@@ -13,7 +13,7 @@ const { major, minor, patch } = semver.parse(version);
 export default defineManifest(async (config, env) => ({
 	manifest_version: 3,
 	name: PLUGIN_NAME,
-	description: 'Enter the Multiplayer Internet',
+	description: 'ACME',
 	// up to four numbers separated by dots
 	version: `${major}.${minor}.${patch}`,
 	// semver is OK in "version_name"
