@@ -9,7 +9,7 @@ const openid = () => (
 		clientID:  AUTH0.CLIENT_ID,
 		issuerBaseURL: AUTH0.BASE_URL,
 		clientSecret: AUTH0.CLIENT_SECRET,
-		secret: AUTH0.SECRET || '0c02ff2cc517ba80496f86d2dbacd781ca9f78da103e56d74420559f5ef1c7ae',
+		secret: AUTH0.SECRET,
 		authorizationParams: {
 			scope: 'openid profile email offline_access',
 			response_type: 'code',
