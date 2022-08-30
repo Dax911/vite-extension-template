@@ -1,0 +1,63 @@
+version: "3.9"
+services:
+   profile_server:
+      container_name: "Extension-Profile-Server"
+      command: [sh, -c, "npm install && nodemon ./index.js"]
+      build:
+         dockerfile: ./Dockerfile.dev.profileserver
+         context: .
+      volumes:
+         - ./profile-server:/etc/code
+         - /etc/code/node_modules
+      ports:
+         - "3010:3010"
+      environment:
+         - PORT=3010
+         - NODE_ENV=development
+         - EXTENSION_ID=value
+         - BASE_URL=http://localhost:3010
+         - LOGOUT_REDIRECT=/
+         - INDEX_REDIRECT=https://ACME.com
+         - SITE_TITLE=ACME
+         - AUTH0_CLIENT_ID=
+         - AUTH0_BASE_URL=https://ACME.us.auth0.com
+         - AUTH0_CLIENT_SECRET=
+         - AUTH_SECRET=
+         - AUTH0_AUDIENCE=https://api.ACME.com/
+   extension_node_modules:
+      container_name: "ACME-Extension-NPM-INSTALL"
+      command: "npm install"
+      build:
+         dockerfile: ./Dockerfile.dev.extension
+         context: .
+      volumes:
+         - ./extension:/etc/code
+         - node_modules_volume:/etc/code/node_modules
+   storybook:
+      container_name: "ACME-Storybook-Dev"
+      command: "npm run storybook"
+      build:
+         dockerfile: ./Dockerfile.dev.extension
+         context: .
+      ports:
+         - "6006:6006"
+      depends_on:
+         - extension_node_modules
+      volumes:
+         - ./extension:/etc/code
+         - node_modules_volume:/etc/code/node_modules
+   extension:
+      container_name: "ACME-Extension-Dev"
+      command: "npm run dev"
+      build:
+         dockerfile: ./Dockerfile.dev.extension
+         context: .
+      ports:
+         - "5173:5173"
+      volumes:
+         - ./extension:/etc/code
+         - node_modules_volume:/etc/code/node_modules
+      depends_on:
+         - extension_node_modules
+volumes:
+   node_modules_volume: {}

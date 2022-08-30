@@ -1,0 +1,5 @@
+@import "../packages/designsystem/typeography.scss";
+
+.fonts.fonts {
+	@include typeography-text-md-regular();
+}

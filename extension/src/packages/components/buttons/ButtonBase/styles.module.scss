@@ -1,0 +1,16 @@
+@import "../../../designsystem/typeography.scss";
+
+.base {
+	border-color: none;
+	border: none;
+	padding: 0;
+	align-items: flex-start;
+	text-align: center;
+	cursor: pointer;
+	background-color: inherit;
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	display: inline-block;
+	margin: 0;
+	@include typeography-text-md-regular();
+}

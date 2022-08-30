@@ -1,0 +1,12 @@
+**/node_modules/
+extension/dist/
+.git/
+.gitignore
+.idea/
+.vscode/
+.vscodeignore
+**/.DS_Store
+**/.env.*
+**/.env
+**/.vite/
+

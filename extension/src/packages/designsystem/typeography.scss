@@ -1,0 +1,275 @@
+
+@mixin typeography-base-font() {
+	font-family: "Inter", sans-serif;
+	font-style: normal;
+}
+
+@mixin typeography-base-font-regular() {
+	@include typeography-base-font();
+	font-weight: 400;
+}
+
+//********* typeography-text-xs *********
+
+@mixin typeography-text-xs-regular() {
+	@include typeography-base-font-regular();
+	font-size: 0.75rem; // 12px
+	line-height: 1rem; // 16px;
+	letter-spacing: -0.0125rem; // -0.2px;
+}
+
+@mixin typeography-text-xs-medium() {
+	@include typeography-text-xs-regular();
+	font-weight: 500;
+}
+
+@mixin typeography-text-xs-semibold() {
+	@include typeography-text-xs-regular();
+	font-weight: 600;
+}
+
+@mixin typeography-text-xs-bold() {
+	@include typeography-text-xs-regular();
+	font-weight: 700;
+}
+
+//********* typeography-text-sm *********
+
+@mixin typeography-text-sm-regular() {
+	@include typeography-base-font-regular();
+	font-size: 0.875rem; // 14px
+	line-height: 1.5rem; // 20px;
+	letter-spacing: 2.24px; // -0.025rem; // -0.4px;
+}
+
+@mixin typeography-text-sm-medium() {
+	@include typeography-text-sm-regular();
+	font-weight: 500;
+}
+
+@mixin typeography-text-sm-semibold() {
+	@include typeography-text-sm-regular();
+	font-weight: 600;
+}
+
+@mixin typeography-text-sm-bold() {
+	@include typeography-text-sm-regular();
+	font-weight: 700;
+}
+
+//********* typeography-text-md *********
+
+@mixin typeography-text-md-regular() {
+	@include typeography-base-font-regular();
+	font-size: 1rem; // 16px
+	line-height: 1.5rem; // 24px;
+	letter-spacing: 0.0375rem; // -0.6px;
+}
+
+@mixin typeography-text-md-medium() {
+	@include typeography-text-md-regular();
+	font-weight: 500;
+}
+
+@mixin typeography-text-md-semibold() {
+	@include typeography-text-md-regular();
+	font-weight: 600;
+}
+
+@mixin typeography-text-md-bold() {
+	@include typeography-text-md-regular();
+	font-weight: 700;
+}
+
+//********* typeography-text-lg *********
+
+@mixin typeography-text-lg-regular() {
+	@include typeography-base-font-regular();
+	font-size: 1.125rem; // 18px
+	line-height: 1.75rem; // 28px;
+	letter-spacing: -0.0375rem; // -0.6px;
+}
+
+@mixin typeography-text-lg-medium() {
+	@include typeography-text-lg-regular();
+	font-weight: 500;
+}
+
+@mixin typeography-text-lg-semibold() {
+	@include typeography-text-lg-regular();
+	font-weight: 600;
+}
+
+@mixin typeography-text-lg-bold() {
+	@include typeography-text-lg-regular();
+	font-weight: 700;
+}
+
+//********* typeography-text-xl *********
+
+@mixin typeography-text-xl-regular() {
+	@include typeography-base-font-regular();
+	font-size: 1.25rem; // 20px
+	line-height: 2.375rem; // 38px;
+	letter-spacing: -0.0375rem; // -0.6px;
+}
+
+@mixin typeography-text-xl-medium() {
+	@include typeography-text-xl-regular();
+	font-weight: 500;
+}
+
+@mixin typeography-text-xl-semibold() {
+	@include typeography-text-xl-regular();
+	font-weight: 600;
+}
+
+@mixin typeography-text-xl-bold() {
+	@include typeography-text-xl-regular();
+	font-weight: 700;
+}
+
+//********* typeography-display-xs *********
+
+@mixin typeography-display-xs-regular() {
+	@include typeography-base-font-regular();
+	font-size: 1.5rem; // 24px
+	line-height: 2rem; // 32px;
+	letter-spacing: -0.0625rem; // -1px;
+}
+
+@mixin typeography-display-xs-medium() {
+	@include typeography-display-md-regular();
+	font-weight: 500;
+}
+
+@mixin typeography-display-xs-semibold() {
+	@include typeography-display-md-regular();
+	font-weight: 600;
+}
+
+@mixin typeography-display-xs-bold() {
+	@include typeography-display-xs-regular();
+	font-weight: 700;
+}
+
+//********* typeography-display-sm *********
+
+@mixin typeography-display-sm-regular() {
+	@include typeography-base-font-regular();
+	font-size: 1.875rem; // 30px
+	line-height: 2.375rem; // 38px;
+	letter-spacing: -0.0625rem; // -1px;
+}
+
+@mixin typeography-display-sm-medium() {
+	@include typeography-display-md-regular();
+	font-weight: 500;
+}
+
+@mixin typeography-display-sm-semibold() {
+	@include typeography-display-md-regular();
+	font-weight: 600;
+}
+
+@mixin typeography-display-sm-bold() {
+	@include typeography-display-sm-regular();
+	font-weight: 700;
+}
+
+//********* typeography-display-md *********
+
+@mixin typeography-display-md-regular() {
+	@include typeography-base-font-regular();
+	font-size: 2.25rem; // 36px
+	line-height: 2.75rem; // 44px;
+	letter-spacing: -0.1rem; // -1.6px;
+}
+
+@mixin typeography-display-md-medium() {
+	@include typeography-display-md-regular();
+	font-weight: 500;
+}
+
+@mixin typeography-display-md-semibold() {
+	@include typeography-display-md-regular();
+	font-weight: 600;
+}
+
+@mixin typeography-display-md-bold() {
+	@include typeography-display-md-regular();
+	font-weight: 700;
+}
+
+//********* typeography-display-lg *********
+
+@mixin typeography-display-lg-regular() {
+	@include typeography-base-font-regular();
+	font-size: 3rem; // 48px
+	line-height: 3.75rem; // 60px;
+	letter-spacing: -0.1rem; // -1.6px;
+}
+
+@mixin typeography-display-lg-medium() {
+	@include typeography-display-lg-regular();
+	font-weight: 500;
+}
+
+@mixin typeography-display-lg-semibold() {
+	@include typeography-display-lg-regular();
+	font-weight: 600;
+}
+
+@mixin typeography-display-lg-bold() {
+	@include typeography-display-lg-regular();
+	font-weight: 700;
+}
+
+//********* typeography-display-xl *********
+
+@mixin typeography-display-xl-regular() {
+	@include typeography-base-font-regular();
+	font-size: 3.75rem; // 60px
+	line-height: 4.5rem; // 72px;
+	letter-spacing: -0.125rem; // -2px;
+}
+
+@mixin typeography-display-xl-medium() {
+	@include typeography-display-xl-regular();
+	font-weight: 500;
+}
+
+@mixin typeography-display-xl-semibold() {
+	@include typeography-display-xl-regular();
+	font-weight: 600;
+}
+
+@mixin typeography-display-xl-bold() {
+	@include typeography-display-xl-regular();
+	font-weight: 700;
+}
+
+//********* typeography-display-2xl *********
+
+@mixin typeography-display-2xl-regular() {
+	@include typeography-base-font-regular();
+	font-size: 4.5rem; // 72px
+	line-height: 6.625rem; // 90px;
+	letter-spacing: -0.125rem; // -2px;
+}
+
+@mixin typeography-display-2xl-medium() {
+	@include typeography-display-2xl-regular();
+	font-weight: 500;
+}
+
+@mixin typeography-display-2xl-semibold() {
+	@include typeography-display-2xl-regular();
+	font-weight: 600;
+}
+
+@mixin typeography-display-2xl-bold() {
+	@include typeography-display-2xl-regular();
+	font-weight: 700;
+}
+

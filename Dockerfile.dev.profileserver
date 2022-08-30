@@ -1,0 +1,13 @@
+# syntax=docker/dockerfile:1
+FROM node:16-alpine
+LABEL "urn:com.docker:label:built-by"="Dockerfile/dev.profileserver" \
+	"urn:com.docker:label:license"="MIT" \
+	"urn:com.docker:label:maintainer"="Hayden (Dax) Porter-Aylor <haydenaylor911@gmail.com>" \
+	"urn:com.docker:label:version"="1.0.0" \
+	"urn:com.docker:label:description"="Profile Server Development Environment for ACME React Components" \
+	"org.opencontainers.image.authors"="Hayden (Dax) Porter-Aylor <haydenaylor911@gmail.com>"
+ENV NODE_ENV development
+WORKDIR /etc/code
+VOLUME ["/etc/code/node_modules"]
+RUN npm install -g npm@7 nodemon
+CMD ["ls", "-la"]
